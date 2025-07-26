@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Tree Menu Demo{% endblock %}
+
+{% block content %}
+<h1>Tree Menu System</h1>
+<p>Welcome to the Django tree menu demonstration.</p>
+<p>Current URL: <code>{{ request.path }}</code></p>
+
+<h2>Features</h2>
+<p>This implementation includes all the required functionality:</p>
+
+<h3>Template Tag Usage</h3>
+<p>Use <code>&#123;% draw_menu 'menu_name' %&#125;</code> to render any menu.</p>
+
+<h3>Smart Navigation</h3>
+<ul>
+    <li>Active item path is automatically expanded</li>
+    <li>Current page is highlighted</li>
+    <li>Child items are revealed based on context</li>
+</ul>
+
+<h3>Database Integration</h3>
+<p>All menu data is stored and managed through the database.</p>
+
+<h3>Admin Management</h3>
+<p>Menus can be created and edited through Django's admin interface.</p>
+
+<h3>URL Flexibility</h3>
+<p>Supports both explicit URLs and Django named URL patterns.</p>
+
+<h3>Performance Optimized</h3>
+<p>Each menu renders with a single optimized database query.</p>
+{% endblock %}
